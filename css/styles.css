@@ -1,0 +1,168 @@
+*{box-sizing: border-box;}
+
+body{
+    margin:0;
+    color:#2B262D;
+    background:#F2EBE5;
+    font-family:'Open Sans', system-ui, -apple-system, sans-serif;
+}
+
+header{
+    padding: 1.5rem 2rem;
+    border-bottom: 2px solid #647295;
+    background: #F2EBE5;
+}
+header h1{
+    margin: 0;
+    font-size: 1.4rem;
+    color: #2B262D;
+}
+header h3{
+    margin:0.25rem 0 0;
+    font-size: 0.95rem;
+    font-weight:500;
+    color: #647295;
+}
+
+main{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+
+.map-container{
+    position: relative;
+    border: 2px solid #647295;
+    border-radius: 12px;
+    background: #FFFFFF;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+.stage, .catwalk{
+    position: absolute;
+    background:#354d73;
+    color: #F2EBE5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.stage{
+    border-radius: 8px;
+    box-shadow: inset 0 -4px 0 rgba(0,0,0,0.2);
+}
+.catwalk{
+    border-radius: 0 0 8px 8px;
+}
+
+.seat{
+    position: absolute;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: transparent;
+    transition: transform 0.15s, box-shadow 0.15s, background-color 0.2s;
+    padding: 0;
+    font-size: 10px;
+}
+.seat:hover:not(.unavailable){
+    transform: scale(1.25);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+.seat.inspected{
+    background: #F4D03F;
+    transform: scale(1.2);
+    border: 2px solid #2B262D;
+    box-shadow: 0 0 15px rgba(244, 208, 63, 0.6);
+    z-index: 5;
+}
+.seat.in-cart{
+    background: plum;
+    border: 2px solid #27AE60;
+    cursor: default;
+}
+.seat.in-cart:hover{
+    transform: none;
+    box-shadow: none;
+}
+.seat.unavailable{
+    background: #2B262D;
+    cursor: not-allowed;
+    opacity: 0.15;
+    transform: none;
+    box-shadow: none;
+}
+.seat.cat-A {background:#9F496E; }
+.seat.cat-B {background: #3e5f8a;}
+.seat.cat-C {background: #deaa88;}
+.seat.cat-D {background: #ffe4c4;}
+
+main#app{
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+#map-area{
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#details-panel{
+    width: 320px;
+    top: 2rem;
+    position: sticky;
+    background: #FFFFFF;
+    border: 2px solid #647295;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+#details-panel.hidden{display: none;}
+#details-panel h2{
+    color: #2B262D;
+    font-size: 1.2rem;
+    margin-top: 0;
+    border-bottom: 2px solid #F2EBE5;
+    padding-bottom: 0.5rem;
+}
+#seat-info{
+    color: #647295;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+.price-total{
+    display: flex;
+    color: #2B262D;
+    font-size: 1.2rem;
+    font-weight: 700;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid #F2EBE5;
+}
+#add-to-cart{
+    width: 100%;
+    cursor:pointer;
+    border:none;
+    border-radius: 8px;
+    padding: 1rem;
+    background: #F4D03F;
+    color: #2B262D;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+#add-to-cart:disabled{
+    color: #999;
+    cursor: not-allowed;
+    background: #E0E0E0;
+}
+#add-to-cart:not(:disabled):hover {
+    background: #E5C100;
+}
