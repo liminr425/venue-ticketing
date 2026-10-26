@@ -73,15 +73,15 @@ main{
     z-index: 10;
 }
 .seat.inspected{
-    background: #F4D03F;
+    background: #ffbf00;
     transform: scale(1.2);
     border: 2px solid #2B262D;
-    box-shadow: 0 0 15px rgba(244, 208, 63, 0.6);
+    box-shadow: 0 0 15px #b57900;
     z-index: 5;
 }
 .seat.in-cart{
     background: plum;
-    border: 2px solid #27AE60;
+    border: 2px solid #8b008b;
     cursor: default;
 }
 .seat.in-cart:hover{
@@ -152,7 +152,7 @@ main#app{
     border:none;
     border-radius: 8px;
     padding: 1rem;
-    background: #F4D03F;
+    background: #ffbf00;
     color: #2B262D;
     font-weight: 700;
     font-size: 1rem;
@@ -164,5 +164,5 @@ main#app{
     background: #E0E0E0;
 }
 #add-to-cart:not(:disabled):hover {
-    background: #E5C100;
+    background: #ffbf00;
 }
