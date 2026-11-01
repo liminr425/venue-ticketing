@@ -19,21 +19,38 @@
       <div id="map-area">
           <p id="status">Loading venue...</p>
       </div>
-      <aside id="details-panel" class="hidden">
-          <h2>Seat Details</h2>
-          <div id="seat-info">
-              <p>No seat selected.</p>
+
+      <aside id="sidebar">
+
+          <div id="details-panel" class="hidden">
+              <h2>Seat Details</h2>
+              <div id="seat-info">
+                  <p>No seat selected.</p>
+              </div>
+              <div class="price-total">
+                  <span>Price:</span>
+                  <span id="seat-price">$0</span>
+              </div>
+              <button id="add-to-cart" disabled>ADD TO CART</button>
           </div>
-          <div class="price-total">
-              <span>Price:</span>
-              <span id="seat-price">$0</span>
+
+          <div id="cart-panel" class="panel">
+              <h2>Your Cart</h2>
+              <div id="cart-items">
+                  <p style="color: #647295; font-size: 0.9rem;">Your cart is empty.</p>
+              </div>
+              <div class="price-total" style="border-top: 2px solid #2B262D;">
+                  <span>Total:</span>
+                  <span id="cart-total">$0</span>
+              </div>
           </div>
-          <button id="add-to-cart" disabled>ADD TO CART</button>
       </aside>
   </main>
 
-<script src="js/venue-data.js"></script>
-<script src="js/venue-render.js"></script>
-<script src="js/main.js"></script>
+  <script src="js/venue-data.js"></script>
+  <script src="js/venue-render.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
 </html>
