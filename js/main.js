@@ -32,5 +32,25 @@ document.addEventListener("DOMContentLoaded",function () {
         seatPrice.textContent="$"+seatData.price;
         addToCartBtn.disabled=false;
     });
+    addToCartBtn.addEventListener("click", function() {
+        if (currentInspectedSeat === null) return;
 
+        const seatId = currentInspectedSeat.dataset.id;
+
+        const isAlreadyInCart = cart.some(function(item) { return item.id === seatId; });
+        if (isAlreadyInCart) {
+            alert("This seat is already in your cart!");
+            return;
+        }
+        const seatData = SEATS.find(function(s) { return s.id === seatId; });
+        cart.push(seatData);
+
+        currentInspectedSeat.classList.remove("inspected");
+        currentInspectedSeat.classList.add("in-cart");
+        currentInspectedSeat.disabled = true;
+        currentInspectedSeat = null;
+        detailsPanel.classList.add("hidden");
+
+        renderCart();
+    });
 });
