@@ -6,9 +6,13 @@ A rectangular concert arena with a stage, catwalk. and six seated zones at four 
 
      zone       | category | price_dollars
 ----------------+----------+---------------
+
 Gold Circle L/R | A        |           180
+
 Floor A         | B        |           120
+
 Left/Right Tier | C        |            85
+
 Floor B         | D        |            55
 
 ## Structure
