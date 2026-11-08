@@ -1,6 +1,15 @@
 let currentInspectedSeat=null;
 document.addEventListener("DOMContentLoaded",function () {
+    if (typeof loadCart === "function") {
+        loadCart();
+    }
+
     renderVenue();
+
+    if (typeof setupMapControls === "function") {
+        setupMapControls();
+    }
+
 
     const map=document.querySelector(".map-container");
     const detailsPanel=document.getElementById("details-panel");

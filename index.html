@@ -16,8 +16,19 @@
   </header>
 
   <main id="app">
-      <div id="map-area">
-          <p id="status">Loading venue...</p>
+      <div id="map-wrapper">
+          <div id="map-controls">
+              <button id="zoom-in" title="Zoom In">+</button>
+              <button id="pan-up" title="Move Up">↑</button>
+              <button id="zoom-out" title="Zoom Out">−</button>
+              <button id="pan-left" title="Move Left">←</button>
+              <button id="pan-down" title="Move Down">↓</button>
+              <button id="pan-right" title="Move Right">→</button>
+              <button id="reset-view" title="Reset View">⟲</button>
+          </div>
+          <div id="map-area">
+              <p id="status">Loading venue...</p>
+          </div>
       </div>
 
       <aside id="sidebar">
@@ -49,6 +60,7 @@
 
   <script src="js/venue-data.js"></script>
   <script src="js/venue-render.js"></script>
+  <script src="js/map-controls.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
 
