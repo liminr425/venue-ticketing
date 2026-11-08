@@ -39,7 +39,7 @@ function renderVenue() {
         seatBtn.style.height=VENUE.seat.size+"px";
 
         seatBtn.dataset.id=seatData.id;
-        seatBtn.title=seatData.sectionName+", Row"+seatData.row+", Seat"+seatData.seatNumber;
+        seatBtn.title=seatData.sectionName+", Row "+seatData.row+", Seat"+seatData.seatNumber;
         map.appendChild(seatBtn);
     }
     mapArea.appendChild(map);

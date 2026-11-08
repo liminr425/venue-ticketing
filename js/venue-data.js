@@ -59,3 +59,4 @@ function buildSeats(venue){
     });
     return seats;
 }
+const SEATS = buildSeats(VENUE);

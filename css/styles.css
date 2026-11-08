@@ -24,15 +24,10 @@ header h3{
     color: #647295;
 }
 
-main{
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    overflow: auto;
-}
-
 .map-container{
     position: relative;
+    flex-shrink: 0;
+    margin: 0 auto;
     border: 2px solid #647295;
     border-radius: 12px;
     background: #FFFFFF;
@@ -104,24 +99,37 @@ main#app{
     display: flex;
     gap: 2rem;
     align-items: flex-start;
+    max-width: 180vw;
+    padding: 2rem;
 }
 
 #map-area{
     flex: 1;
+    min-width: 0;
+    max-height: calc(100vh - 8rem);
     overflow: auto;
     display: flex;
-    justify-content: center;
+    padding: 2rem;
+    border-radius: 12px;
+    background: #e5dbd3;
+}
+
+#sidebar{
+    display: flex;
+    gap: 1.5rem;
+    width: 340px;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: sticky;
+    top: 2rem;
 }
 
 #details-panel{
-    width: 320px;
-    top: 2rem;
-    position: sticky;
+    width: 100%;
     background: #FFFFFF;
     border: 2px solid #647295;
     border-radius: 12px;
     padding: 1.5rem;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
 }
 #details-panel.hidden{display: none;}
 #details-panel h2{
@@ -165,15 +173,6 @@ main#app{
 }
 #add-to-cart:not(:disabled):hover {
     background: #ffbf00;
-}
-
-#sidebar {
-    width: 340px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    position: sticky;
-    top: 2rem;
 }
 
 .panel {

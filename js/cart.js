@@ -19,7 +19,7 @@ function renderCart(){
                                <strong>${seat.sectionName}</strong>
                                Row${seat.row}, Seat${seat.seatNumber} ($${seat.price})
                                </div>
-                               <button class="remove-btn" onclick="removeFromCart('${seat.id}')"></button>`;
+                               <button class="remove-btn" onclick="removeFromCart('${seat.id}')">✕</button>`;
             cartItemDiv.appendChild(itemDiv);
         });
     }
@@ -27,7 +27,7 @@ function renderCart(){
 }
 function removeFromCart(seatId){
     cart=cart.filter(function(seat){
-        return seat,id !== seatId;
+        return seat.id !== seatId;
     });
     const seatElement = document.querySelector(`.seat[data-id="${seatId}"]`);
     if (seatElement){
