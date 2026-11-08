@@ -8,20 +8,34 @@ body{
 }
 
 header{
-    padding: 1.5rem 2rem;
-    border-bottom: 2px solid #647295;
-    background: #F2EBE5;
+    position: relative;
+    padding: 4rem 2rem 3.5rem;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 4px solid #ffbf00;
+    background:
+            conic-gradient(from 200deg at 20% -10%, transparent 0deg, rgba(255,191,0,0.25) 12deg, transparent 28deg),
+            conic-gradient(from 160deg at 80% -10%, transparent 0deg, rgba(159,73,110,0.45) 14deg, transparent 30deg),
+            conic-gradient(from 180deg at 50% -20%, transparent 0deg, rgba(255,255,255,0.15) 10deg, transparent 22deg),
+            radial-gradient(ellipse at 50% 120%, rgba(159,73,110,0.8), transparent 60%),
+            linear-gradient(180deg, #2B262D 0%, #354d73 100%);
 }
+
 header h1{
     margin: 0;
-    font-size: 1.4rem;
-    color: #2B262D;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #F2EBE5;
+    text-shadow: 0 0 20px rgba(255,191,0,0.5), 0 4px 12px rgba(0,0,0,0.5);
 }
 header h3{
-    margin:0.25rem 0 0;
-    font-size: 0.95rem;
-    font-weight:500;
-    color: #647295;
+    margin: 0.75rem 0 0;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #ffbf00;
 }
 
 .map-container{
