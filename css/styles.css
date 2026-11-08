@@ -283,3 +283,34 @@ main#app{
 #pan-down { grid-column: 2; grid-row: 2; }
 #pan-right { grid-column: 3; grid-row: 2; }
 #reset-view { grid-column: 1 / span 3; grid-row: 3; width: 100%; }
+
+#map-area{
+    position: relative;
+    overflow: hidden;
+    touch-action: none;
+    cursor: grab;
+    user-select: none;
+}
+#map-area.dragging{ cursor: grabbing; }
+.seat{ cursor: pointer; }
+
+
+@media (max-width: 900px) {
+    body {
+        overflow: auto;
+    }
+    main#app {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        padding: 1rem;
+    }
+    #map-area {
+        width: 100%;
+        min-height: 500px;
+    }
+    #sidebar {
+        width: 100%;
+        position: static;
+    }
+}
